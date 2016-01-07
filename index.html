@@ -144,6 +144,8 @@
       <div class="spotlight"></div>
     </div>
 
+    <audio src="./wind.mp3" autoplay loop></audio>
+
     <script>
       var cover = document.querySelector('.cover')
       function move (x, y) {
@@ -164,7 +166,6 @@
         if (touch) move(touch.pageX, touch.pageY)
       })
 
-
       var h1 = document.querySelector('h1')
       var h2 = document.querySelector('h2')
       function fitText () {
@@ -174,6 +175,10 @@
       fitText()
       window.addEventListener('resize', fitText)
 
+      var audio = document.querySelector('audio')
+      document.addEventListener('touchstart', function (e) {
+        audio.play()
+      })
     </script>
   </body>
 </html>
