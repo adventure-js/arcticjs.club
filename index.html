@@ -26,6 +26,9 @@
     <script>
       var cover = document.querySelector('.cover')
 
+      cover.style.left = ((window.screen.width / 2) - 5000) + 'px'
+      cover.style.top = ((window.screen.height / 2) - 5000) + 'px'
+
       document.addEventListener('mousemove', function (e) {
         var x = e.pageX
         var y = e.pageY
