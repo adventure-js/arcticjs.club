@@ -1,1 +1,38 @@
-Hello World!
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Arctic.js</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Chau+Philomene+One:400,400italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/main.css" charset="utf-8">
+  </head>
+
+  <body>
+    <div id="snow"></div>
+    <main>
+      <h1>Arctic JS</h1>
+      <h2>Longyearbyen, Svalbard, 74° North<br>January 18-22, 2016</h2>
+    </main>
+
+    <div class="cover">
+      <div class="left"></div>
+      <div class="right"></div>
+      <div class="top"></div>
+      <div class="bottom"></div>
+      <div class="spotlight"></div>
+    </div>
+
+    <script>
+      var cover = document.querySelector('.cover')
+
+      document.addEventListener('mousemove', function (e) {
+        var x = e.pageX
+        var y = e.pageY
+
+        cover.style.left = (x - 5000) + 'px'
+        cover.style.top = (y - 5000) + 'px'
+      })
+    </script>
+  </body>
+</html>
