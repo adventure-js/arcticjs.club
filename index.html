@@ -162,6 +162,7 @@
       })
 
       document.addEventListener('touchmove', function (e) {
+        e.preventDefault()
         var touch = e.changedTouches[0]
         if (touch) move(touch.pageX, touch.pageY)
       })
