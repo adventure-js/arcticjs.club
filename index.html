@@ -26,6 +26,7 @@
         height: 10000px;
         position: fixed;
         z-index: 99999;
+        opacity: 0.97;
       }
 
       .spotlight {
@@ -34,12 +35,11 @@
         position: absolute;
         top: 4800px;
         left: 4800px;
-        background-image: url('./spotlight.png');
-        background-size: 400px 400px;
+        background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 70%);
       }
 
       .left, .right, .top, .bottom {
-        background-color: rgba(0, 0, 0, 0.97);
+        background-color: rgba(0, 0, 0, 1);
         position: absolute;
       }
 
@@ -82,16 +82,14 @@
         color: rgba(153, 235, 255, 0.4);
         font-size: 250px;
         top: 0px;
-        line-height: 1;
       }
 
       h2 {
-        color: rgba(153, 235, 255, 0.6);
+        color: rgba(153, 235, 255, 0.5);
         font-size: 50px;
         bottom: 30px;
       }
 
-      body { background-color:#333; }
       #snow{
         background: none;
         font-family: Androgyne;
@@ -171,7 +169,7 @@
       var h2 = document.querySelector('h2')
       function fitText () {
         h1.style.fontSize = Math.min(h1.offsetWidth / 5, 220) + 'px'
-        h2.style.fontSize = Math.min(h2.offsetWidth / 20, 90) + 'px'
+        h2.style.fontSize = Math.min(h2.offsetWidth / 25, 90) + 'px'
       }
       fitText()
       window.addEventListener('resize', fitText)
