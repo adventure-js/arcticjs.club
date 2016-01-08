@@ -100,17 +100,27 @@
         bottom: 30px;
       }
 
-      .register {
+      .hex {
+        background-image: url('./arcticjs.svg');
+        width: 136px;
+        height: 157px;
         position: fixed;
-        font-size: 30px;
-        bottom: 25px;
-        right: 25px;
-        padding: 10px;
+        bottom: 300px;
+        right: 50px;
+        opacity: 0.5;
         cursor: pointer;
       }
 
-      .register:hover {
-        cursor: pointer;
+      .hex:before {
+        content: '';
+        background-color: #666666;
+        width: 10px;
+        height: 200px;
+        position: absolute;
+        top: 153px;
+        left: 63px;
+        opacity: 0.5;
+        cursor: none;
       }
 
       #snow {
@@ -149,7 +159,6 @@
         50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
         100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
       }
-
     </style>
   </head>
 
@@ -157,8 +166,11 @@
     <div id="snow"></div>
     <main>
       <h1>Arctic JS</h1>
-      <h2>Longyearbyen, Svalbard, 74° North<br>January 18-21, 2016</h2>
-      <a target="_blank" class="register" href="https://github.com/watson/arcticjs.club/issues/2">Register</a>
+      <h2>
+        Longyearbyen, Svalbard, 74° North<br>
+        January 18-21, 2016<br>
+      </h2>
+      <a target="_blank" class="hex" href="https://github.com/watson/arcticjs.club/issues/2"></a>
     </main>
 
     <div class="cover">
@@ -194,7 +206,7 @@
       var h1 = document.querySelector('h1')
       var h2 = document.querySelector('h2')
       function fitText () {
-        h1.style.fontSize = Math.min(h1.offsetWidth / 5, 220) + 'px'
+        h1.style.fontSize = Math.min(h1.offsetWidth / 6, 220) + 'px'
         h2.style.fontSize = Math.min(h2.offsetWidth / 25, 90) + 'px'
       }
       fitText()
