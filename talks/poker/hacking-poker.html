@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <style>
+      * {
+        font-family: monospace;
+      }
+
+      p, pre, li {
+        font-size: 16px;
+      }
+    </style>
+    <title>Hacking Poker</title>
+  </head>
+  <body>
+    <img src="imgs/arcticjs.png"></img>
+    <h1>Hacking Poker: How to Beat Your Friends at Poker</h1>
+    <p>Neal Wu</p>
+    <br>
+    <h2>Poker Hand Rankings</h2>
+    <ul>
+      <li>High card: <br> <img src="imgs/ts.gif"></img> <img src="imgs/jc.gif"></img> <img src="imgs/2h.gif"></img> <img src="imgs/3s.gif"></img> <img src="imgs/9s.gif"></img></li>
+      <li>One pair: <br> <img src="imgs/ts.gif"></img> <img src="imgs/jc.gif"></img> <img src="imgs/2h.gif"></img> <img src="imgs/3s.gif"></img> <img src="imgs/3h.gif"></img></li>
+      <li>Two pair: <br> <img src="imgs/ts.gif"></img> <img src="imgs/jc.gif"></img> <img src="imgs/jh.gif"></img> <img src="imgs/3s.gif"></img> <img src="imgs/3h.gif"></img></li>
+      <li>Three of a kind: <br> <img src="imgs/ts.gif"></img> <img src="imgs/jc.gif"></img> <img src="imgs/jh.gif"></img> <img src="imgs/js.gif"></img> <img src="imgs/3h.gif"></img></li>
+      <li>Straight: <br> <img src="imgs/ts.gif"></img> <img src="imgs/jc.gif"></img> <img src="imgs/9h.gif"></img> <img src="imgs/8s.gif"></img> <img src="imgs/7h.gif"></img></li>
+      <li>Flush: <br> <img src="imgs/td.gif"></img> <img src="imgs/jd.gif"></img> <img src="imgs/2d.gif"></img> <img src="imgs/8d.gif"></img> <img src="imgs/3d.gif"></img></li>
+      <li>Full house: <br> <img src="imgs/ts.gif"></img> <img src="imgs/th.gif"></img> <img src="imgs/tc.gif"></img> <img src="imgs/8s.gif"></img> <img src="imgs/8h.gif"></img></li>
+      <li>Four of a kind: <br> <img src="imgs/ts.gif"></img> <img src="imgs/th.gif"></img> <img src="imgs/tc.gif"></img> <img src="imgs/td.gif"></img> <img src="imgs/jh.gif"></img></li>
+      <li>Straight flush: <br> <img src="imgs/3h.gif"></img> <img src="imgs/6h.gif"></img> <img src="imgs/7h.gif"></img> <img src="imgs/4h.gif"></img> <img src="imgs/5h.gif"></img></li>
+      <li>Royal flush: <br> <img src="imgs/tc.gif"></img> <img src="imgs/jc.gif"></img> <img src="imgs/qc.gif"></img> <img src="imgs/ac.gif"></img> <img src="imgs/kc.gif"></img></li>
+    </ul>
+
+    <br>
+    <br>
+
+    <h2>Betting Rounds</h2>
+    <pre>Preflop</pre>
+    <img src="imgs/ac.gif"></img><img src="imgs/ah.gif"></img>
+    <img src="imgs/6s.gif"></img><img src="imgs/6c.gif"></img>
+    <br>
+    <pre>      Neal             Li</pre>
+
+    <br>
+
+    <img src="imgs/3c.gif"></img><img src="imgs/9s.gif"></img><img src="imgs/jh.gif"></img>
+    <img src="imgs/6d.gif"></img>
+    <img src="imgs/2s.gif"></img>
+    <br>
+    <pre>         Flop             Turn    River</pre>
+
+    <br>
+    <br>
+
+    <h2>Bluffing</h2>
+    <p><em>Bluffing</em> is making a bet with a weak hand with the goal of having your opponent fold a hand better than yours. For example, if the board is the same as the one above:</p>
+
+    <img src="imgs/3c.gif"></img><img src="imgs/9s.gif"></img><img src="imgs/jh.gif"></img>
+    <img src="imgs/6d.gif"></img>
+    <img src="imgs/2s.gif"></img>
+
+    <p>And your hand is:</p>
+
+    <img src="imgs/7d.gif"></img><img src="imgs/8d.gif"></img>
+
+    <p>Then your hand would benefit from bluffing both because it has almost no hope of winning the hand at showdown with 8-high and because there is a good chance that a strong bet will fold many hands better than yours, such as A-high or a weak pair.</p>
+
+    <p><strong>Questions to discuss:</strong> when you are bluffing, how much should you bet? How do you know whether a bluff will be the best move (most profitable)?</p>
+
+    <br>
+    <br>
+
+    <h2>Semi-bluffing</h2>
+
+    <img src="imgs/3c.gif"></img><img src="imgs/9s.gif"></img><img src="imgs/jh.gif"></img>
+    <br>
+    <img src="imgs/tc.gif"></img><img src="imgs/8c.gif"></img> vs. <img src="imgs/9d.gif"></img><img src="imgs/td.gif"></img>
+
+    <br>
+    <br>
+
+    <img src="imgs/4d.gif"></img><img src="imgs/9s.gif"></img><img src="imgs/td.gif"></img><img src="imgs/2c.gif"></img>
+    <br>
+    <img src="imgs/ad.gif"></img><img src="imgs/5d.gif"></img> vs. <img src="imgs/6h.gif"></img><img src="imgs/6s.gif"></img>
+
+    <br>
+    <br>
+    <br>
+
+    <p><em>Semi-bluffing</em> is bluffing with significant equity--in other words, bluffing with a hand that still has a solid chance of winning, such as a straight draw or a flush draw.</p>
+
+    <p>Semi-bluffing is profitable because you have two ways to win the hand: first, by making your opponent fold (which is known as fold equity), and second, by making the best hand even when they call. This is also a great example of why aggression is critical in poker.</p>
+
+    <br>
+    <br>
+
+    <h2>Pot Odds</h2>
+
+    <p>Let's say on the river you have a medium-strength hand like second pair on the board. The pot is $20, and your opponent bets $20. You think your opponent usually has a strong hand here but could be bluffing sometimes. How often do you need to be right in order to justify the call?</p>
+
+    <p>Another example: you are holding<img src="imgs/as.gif"></img><img src="imgs/3s.gif"></img> on a board of <img src="imgs/4s.gif"></img><img src="imgs/8s.gif"></img><img src="imgs/9h.gif"></img><img src="imgs/tc.gif"></img>, so you will make your flush on the river about 20% of the time. Your opponent bets $10 into a pot of $30. Should you call?</p>
+
+    <br>
+    <br>
+
+    <h2>Implied Odds</h2>
+
+    <p>You are playing a $1/$2 game with a stack of $300 in front of you. Your opponent in early position raises to $6 with $300 as well, and you are on the button with <img src="imgs/3h.gif"></img><img src="imgs/3c.gif"></img>. You know your opponent is very tight and will only make this raise with either AA or KK. What should you do?</p>
+    <br>
+    <p>Answer: call with the goal of playing a big pot when you hit another 3 on the flop.</p>
+    <br>
+    <img src="imgs/3d.gif"></img><img src="imgs/6c.gif"></img><img src="imgs/tc.gif"></img>
+
+    <br>
+    <br>
+    <br>
+
+    <p>Other examples (postflop):</p>
+
+    <img src="imgs/9h.gif"></img><img src="imgs/js.gif"></img> on <img src="imgs/2c.gif"></img><img src="imgs/8h.gif"></img><img src="imgs/ts.gif"></img>
+
+    <br>
+    <br>
+
+    <img src="imgs/ah.gif"></img><img src="imgs/8h.gif"></img> on <img src="imgs/2h.gif"></img><img src="imgs/4s.gif"></img><img src="imgs/qh.gif"></img>
+
+    <br>
+    <p>Note that both of these hands are draws to the nuts (the best hand possible), which is important because you can win a very large pot when your opponent improves to a second-best hand (such as a lower flush when you have the ace-high flush).</p>
+
+    <br>
+    <br>
+
+    <h2>Continuation Betting</h2>
+
+    <p>You're on the button with <img src="imgs/8h.gif"></img><img src="imgs/9h.gif"></img> and everyone else has folded to you. The blinds are $1/$2. What should you do?</p>
+
+    <p>Answer: Raise. You can either steal the blinds or play a pot in position with a hand that has a large amount of potential (very similar to semi-bluffing).</p>
+
+    <p>The flop comes <img src="imgs/ad.gif"></img><img src="imgs/4c.gif"></img><img src="imgs/jh.gif"></img> and your opponent checks to you. The pot is $13. What should you do?</p>
+
+    <p>Answer: Bet. You flopped virtually nothing, but in all likelihood your opponent also flopped nothing (on average, you will only make a pair on the flop 1/3 of the time).</p>
+
+    <br>
+    <br>
+
+    <h2>Reverse Implied Odds</h2>
+
+    <p>Reverse implied odds is a term used to describe when you are drawing to hand that may still be second-best when you hit it. For example if a tight opponent raises from early position, and you find yourself in the blinds with <img src="imgs/kh.gif"></img><img src="imgs/js.gif"></img>, you should typically fold the hand. Your opponent could have a hand like <img src="imgs/qh.gif"></img><img src="imgs/qs.gif"></img>, <img src="imgs/as.gif"></img><img src="imgs/kc.gif"></img>, or even <img src="imgs/ah.gif"></img><img src="imgs/ad.gif"></img>, so even if you flop top pair of kings or jacks you have no way of knowing whether your hand is good.</p>
+
+    <p>Similar examples occur postflop: for example, drawing to a straight when there is also a flush draw on board, such as <img src="imgs/qh.gif"></img><img src="imgs/jd.gif"></img> on <img src="imgs/ts.gif"></img><img src="imgs/9h.gif"></img><img src="imgs/2s.gif"></img>. If you make your straight with the <img src="imgs/8s.gif"></img> or the <img src="imgs/ks.gif"></img>, you could lose a big pot to someone holding a flush.</p>
+
+    <h2>Position</h2>
+
+    <p>Position is key in poker. It allows you to bluff better, to value bet better, to play your draws better, to extract value out of your strong hands better; thus it allows you to play a wider range of starting hands.</p>
+  </body>
+</html>
