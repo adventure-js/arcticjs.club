@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Arctic JS</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/assets/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/assets/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/assets/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/assets/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/assets/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/assets/manifest.json">
+    <link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage" content="/assets/mstile-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link href='https://fonts.googleapis.com/css?family=Chau+Philomene+One:400' rel='stylesheet' type='text/css'>
+    <style>
+      html, body {
+        margin: 0;
+        background-color: #000;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      body {
+        background-image: url('/assets/bg.jpg');
+        background-position: 70% center;
+        background-size: cover;
+        color: rgba(153, 235, 255, 0.5);
+        font-family: 'Chau Philomene One', sans-serif;
+      }
+
+      a {
+        color: rgba(153, 235, 255, 0.5);
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .cover {
+        width: 10000px;
+        height: 10000px;
+        position: fixed;
+        z-index: 99999;
+        opacity: 0.97;
+        pointer-events: none;
+      }
+
+      .spotlight {
+        width: 400px;
+        height: 400px;
+        position: absolute;
+        top: 4800px;
+        left: 4800px;
+        background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 70%);
+      }
+
+      h1, h2, #newsletter {
+        width: 100%;
+        text-align: center;
+        position: fixed;
+      }
+
+      h1 {
+        color: rgba(153, 235, 255, 0.4);
+        font-size: 250px;
+        top: 0px;
+      }
+
+      h2 {
+        font-size: 50px;
+        bottom: 30px;
+      }
+
+      #newsletter {
+        top: 50%;
+      }
+
+      #newsletter a {
+        padding: 5px 20px;
+        border-radius: 5px;
+        font-size: 20px;
+        background-color: #aa3939;
+      }
+
+      #newsletter a:hover {
+        color: white;
+        cursor: pointer;
+      }
+
+      #snow {
+        pointer-events: none;
+        background: none;
+        font-family: Androgyne;
+        background-image: url('/assets/s1.png'), url('/assets/s2.png'), url('/assets/s3.png');
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index:1;
+        -webkit-animation: snow 10s linear infinite;
+        -moz-animation: snow 10s linear infinite;
+        -ms-animation: snow 10s linear infinite;
+        animation: snow 10s linear infinite;
+      }
+      @keyframes snow {
+        0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+        50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+        100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+      }
+      @-moz-keyframes snow {
+        0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+        50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+        100% {background-position: 400px 1000px, 200px 400px, 100px 300px;}
+      }
+      @-webkit-keyframes snow {
+        0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+        50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+        100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+      }
+      @-ms-keyframes snow {
+        0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+        50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+        100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+      }
+    </style>
+  </head>
+  <body>
+    <div id="snow"></div>
+    <main>
+      <h1>ArcticJS</h1>
+      <h2>
+        Longyearbyen, Svalbard, 78° North<br>
+        December 16-17, 2017<br>
+      </h2>
+      <div id="newsletter">
+        <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLScSfP7jTGcp_oqDwLiKsSBGyu-HcjEIPJ0J_cHKSNpnSnzZ6Q/viewform">Subscribe and get notified when tickets are available</a>
+      </div>
+    </main>
+
+    <audio src="/assets/wind.mp3" autoplay loop></audio>
+  </body>
+</html>
