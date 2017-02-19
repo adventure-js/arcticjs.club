@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Arctic JS</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/assets/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/assets/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/assets/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/assets/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/assets/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/assets/manifest.json">
+    <link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage" content="/assets/mstile-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link href='https://fonts.googleapis.com/css?family=Chau+Philomene+One:400' rel='stylesheet' type='text/css'>
+    <style>
+      html, body {
+        margin: 0;
+        background-color: #000;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      body {
+        background-image: url('/assets/bg.jpg');
+        background-position: 70% center;
+        background-size: cover;
+        cursor: none;
+        color: rgba(153, 235, 255, 0.5);
+        font-family: 'Chau Philomene One', sans-serif;
+      }
+
+      a {
+        color: rgba(153, 235, 255, 0.5);
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .cover {
+        width: 10000px;
+        height: 10000px;
+        position: fixed;
+        z-index: 99999;
+        opacity: 0.97;
+        pointer-events: none;
+      }
+
+      .spotlight {
+        width: 400px;
+        height: 400px;
+        position: absolute;
+        top: 4800px;
+        left: 4800px;
+        background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 70%);
+      }
+
+      .left, .right, .top, .bottom {
+        background-color: rgba(0, 0, 0, 1);
+        position: absolute;
+      }
+
+      .left {
+        left: 0;
+        top: 0;
+        width: 4800px;
+        height: 10000px;
+      }
+
+      .right {
+        right: 0;
+        top: 0;
+        width: 4800px;
+        height: 10000px;
+      }
+
+      .top {
+        left: 4800px;
+        top: 0;
+        width: 400px;
+        height: 4800px;
+      }
+
+      .bottom {
+        left: 4800px;
+        bottom: 0;
+        width: 400px;
+        height: 4800px;
+      }
+
+      h1, h2 {
+        width: 100%;
+        text-align: center;
+        position: fixed;
+      }
+
+      h1 {
+        color: rgba(153, 235, 255, 0.4);
+        font-size: 250px;
+        top: 0px;
+      }
+
+      h2 {
+        font-size: 50px;
+        bottom: 30px;
+      }
+
+      .hex {
+        background-image: url('/assets/arcticjs.svg');
+        width: 136px;
+        height: 157px;
+        position: fixed;
+        bottom: 300px;
+        right: 50px;
+        opacity: 0.5;
+        cursor: pointer;
+      }
+
+      .hex:before {
+        content: '';
+        background-color: #666666;
+        width: 10px;
+        height: 200px;
+        position: absolute;
+        top: 153px;
+        left: 63px;
+        opacity: 0.5;
+        cursor: none;
+      }
+
+      #snow {
+        pointer-events: none;
+        background: none;
+        font-family: Androgyne;
+        background-image: url('/assets/s1.png'), url('/assets/s2.png'), url('/assets/s3.png');
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index:1;
+        -webkit-animation: snow 10s linear infinite;
+        -moz-animation: snow 10s linear infinite;
+        -ms-animation: snow 10s linear infinite;
+        animation: snow 10s linear infinite;
+      }
+      @keyframes snow {
+        0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+        50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+        100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+      }
+      @-moz-keyframes snow {
+        0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+        50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+        100% {background-position: 400px 1000px, 200px 400px, 100px 300px;}
+      }
+      @-webkit-keyframes snow {
+        0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+        50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+        100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+      }
+      @-ms-keyframes snow {
+        0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+        50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+        100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="snow"></div>
+    <main>
+      <h1>Arctic JS</h1>
+      <h2>
+        Longyearbyen, Svalbard, 78° North<br>
+        January 18-21, 2016<br>
+      </h2>
+      <a target="_blank" class="hex" href="https://github.com/watson/arcticjs.club/issues/2"></a>
+    </main>
+
+    <div class="cover">
+      <div class="left"></div>
+      <div class="right"></div>
+      <div class="top"></div>
+      <div class="bottom"></div>
+      <div class="spotlight"></div>
+    </div>
+
+    <audio src="/assets/water.mp3" autoplay loop></audio>
+
+    <script>
+      var cover = document.querySelector('.cover')
+      function move (x, y) {
+        cover.style.left = (x - 5000) + 'px'
+        cover.style.top = (y - 5000) + 'px'
+      }
+
+      // start centered
+      move(window.screen.width / 2, window.screen.height / 2)
+
+      document.addEventListener('mousemove', function (e) {
+        move(e.pageX, e.pageY)
+      })
+
+      document.addEventListener('touchmove', function (e) {
+        e.preventDefault()
+        var touch = e.changedTouches[0]
+        if (touch) move(touch.pageX, touch.pageY)
+      })
+
+      var h1 = document.querySelector('h1')
+      var h2 = document.querySelector('h2')
+      function fitText () {
+        h1.style.fontSize = Math.min(h1.offsetWidth / 6, 220) + 'px'
+        h2.style.fontSize = Math.min(h2.offsetWidth / 25, 90) + 'px'
+      }
+      fitText()
+      window.addEventListener('resize', fitText)
+
+      var audio = document.querySelector('audio')
+      document.addEventListener('touchstart', function (e) {
+        audio.play()
+      })
+    </script>
+  </body>
+</html>
